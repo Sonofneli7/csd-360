@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+    Nelson Morales
+    4.2.2022.
+    Assignment-  Programming to modify the output line of 1183.2857142857142 to
+    341.14285714285717
+    1185.4
+    842.0011574074074
+    113.28571428571433
+    343.2
+    841.75 
+    Given 2 lines of code:
+    var i = 842;
+    document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+
+       Bellevue University
+
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson JS Calculation</title>
+</head>
+
+<body>
+    <h1> Nelson's JavaScript Calculation</h1>
+
+    <Script>
+        var i = 842;
+        document.write(i + i % 3 / 7 - 2 + 7 ** 3, '<br/>');
+
+        // result of above equation is 1183.2857142857142
+
+        //341.14285714285717 equals results of equation listed below
+        document.write((i + i) % 3 / 7 - 2 + 7 ** 3, '<br/>');
+
+        //1185.4 following
+        document.write(i + i % 3 / (7 - 2) + 7 ** 3, '<br/>');
+
+        //842.0011574074074 following
+        document.write(i + i % 3 / (7 - 2 + 7) ** 3, '<br/>');
+
+        //113.28571428571433 following
+        document.write(i + i % 3 / 7 - (2 + 7) ** 3, '<br/>');
+
+        //343.2 following
+        document.write((i + i) % 3 / (7 - 2) + 7 ** 3, '<br/>');
+
+        //841.75 technically no document.write for it because will not hit number exactly
+        document.write (i + i % 3 /(7 - 2 + 7 ** 3), '<br/>');
+    </Script>
+</body>
+
+</html>
