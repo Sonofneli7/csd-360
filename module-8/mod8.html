@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<!--
+
+    Nelson Morales
+    4.24.2022
+    Assignment Module 8-  Create a web page that displays a table of the values of 4 to 14 displaying their:
+Initial value.
+Square root (with only two digits to the right of the decimal point).
+The base multiplied to the power of 2.
+The base multiplied to the power of 3.
+Display a table containing the values using loop iteration.
+Ensure you include using methods sqrt() and pow() in the display.
+       Bellevue University
+        -->
+        <head>
+            <title>Nelson's Table Displays</title>
+            <h1>Nelson's Table Displays</h1>
+        
+        </head>
+<body>
+    <script>
+        // creating table tag with attributes
+        document.write('<table border="2" cellspacing="0" cellpadding="10">');
+        // creating th tag
+        document.write("<tr><th>Initial value</th><th>Square Root</th>");
+        // creating th tag
+        document.write("<th>Power of 2</th><th>Power of 3</th></tr>");
+
+        for (let i = 4; i <= 14; i++) {
+            // create tr tag
+            document.write("<tr>");
+            document.write(`<td>${i}</td>`);
+            // create td tag with the value of sqrt of i 
+            document.write(`<td>${Math.sqrt(i).toFixed(2)}</td>`);
+            // create td tag with the value of power of 2 for i
+            document.write(`<td>${Math.pow(i, 2)}</td>`);
+            // create td tag with the value of power of 3 for i
+            document.write(`<td>${Math.pow(i, 3)}</td>`);
+            // create ending tr tag
+            document.write("</tr>");
+        }
+        // create ending table tag
+        document.write("<table/>");
+
+    </script>
+
+</body>
+
+</html>
