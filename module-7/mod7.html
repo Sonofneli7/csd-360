@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+    Nelson Morales
+    4.24.2022
+    Assignment-  Programming  Using a for loop, print the array first in the original array orde
+
+       Bellevue University
+        -->
+
+<head>
+    <title>Nelson's JavaScript Arrays</title>
+
+</head>
+
+<body>
+    <h1>Nelson's JavaScript Arrays</h1>
+    <p>Sport's Teams in Original Order</p>
+
+<p id="demo"></p>
+    <script>
+        // declare array
+    var sports_Teams, text, Len, i;
+    sports_Teams= [ "Giants" , "Patriots" , "Eagles" , "Rams" , "Chargers" , "Bears" , "Ravens" ,"Dolphins" , "Raiders" , "Cardinals" ];
+    Len = sports_Teams.length;
+
+text = "<ul>";
+for (i = 0; i < Len; i++) {
+text += "<li>" + sports_Teams[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+
+    </script>
+    
+</body>
+
+</html>
