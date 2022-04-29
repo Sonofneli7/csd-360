@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<!--
+
+    Nelson Morales
+    4.29.2022
+    Assignment Module 9-  For this assignment, create a function titled 
+    counter that takes an array of numbers (at least 10 numbers) as the 
+    parameter. The function is then to return an array which contains 
+    the amount of negative elements, the amount of zeros, and the amount 
+    of values greater than zero in the given array parameter, and to print
+    that array. You must call the function at least three times with a
+    different number set each time.
+       Bellevue University
+        -->
+
+      
+        <head>
+           <title>Nelson's Counter</title>
+           <h1>Nelson's Counter</h1>
+        </head>
+        <body>
+           <!-- paragraphs to display the elements count -->
+           <p id = "arraynumbers"></p>
+           <p id = "negativenumbers"></p>
+           <p id = "positivenumbers"></p>
+           <p id = "zeronumbers"></p>
+           <!-- JavaScript Code -->
+           <script>
+               // decalre and initialize an array
+               array = [7, 0, -2, 4, 11, -3, 1];
+               // display the array in the id = arraynumbers paragraph
+               document.getElementById("arraynumbers").innerHTML = "The array numbers are " + array
+               // decalre and initialize the countes for postive negative and zero elements
+               var negativeCounter = 0, positiveCounter = 0, zeroCounter = 0;
+               // Lopp through array length
+               for(var i = 0; i < array.length ; i++){
+                   // if number is negative increase negativeCounter count
+                   if(array[i] < 0 ){
+                       negativeCounter++;
+                   }
+                   // if number is positive increase negitiveCounter count
+                   else if(array[i] > 0){
+                       positiveCounter++
+                   }
+                   // if number is zero increase zeroCounter count
+                   else{
+                       zeroCounter++;
+                   }
+               }
+               // display the negativenumbers count in the id = negitivenumbers paragraph
+               document.getElementById("negativenumbers").innerHTML = "The numbers of negative elements in array : " +negativeCounter
+               // display the positivenumbers count in the id = positivenumbers paragraph
+               document.getElementById("positivenumbers").innerHTML = "The numbers of Positive elements in array : " +positiveCounter
+               // display the zeronumbers count in the id = zeronumbers paragraph
+               document.getElementById("zeronumbers").innerHTML = "The numbers of zero elements in array : " +zeroCounter
+        
+           </script>
+        
+        </body>
+        </html>
