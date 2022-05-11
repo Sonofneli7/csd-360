@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nelson's demo webpage</title>
+  </head>
+  <body>
+    <!-- HTML -->
+    <!-- heading text with colors -->
+    <h1 id="demoh1ref" style="background-color: grey; color: aliceblue">Nelson's Events  Page</h1>
+
+    <!-- paragraph -->
+    <p id="demopref">
+     Last summer I took the opportunity to go on a boys trip and venture through Baltimore, Washington, and Philadelphia. 
+     It was the first time that I actually had been through these areas. As my friend and I on the first day up to the Mid North East Metropolis marveled at 
+     the enormous sites we came upon a few of my favorites. The first was the Lincoln Memorial. President Abraham sits upon his thrown to 
+     symbolize what freedoms we ultimately attain. My friend and I then took a nice trip over the the brotherly love
+     of "Philly" or most commonly known as Philadelphia. It's always been my dream to see up close and live the true embodiment of
+     human endurance, that symbol to me has always been known as the Rocky Balboa statue. Talk about a Life
+     feeling accomplished.
+    </p>
+
+    <br /><br />
+
+    <!-- an image -->
+    <h3>Pictures of Interest</h3>
+    <img src="img/LincolnMemorial1.JPG" id="imgofintr" alt="an image of interest" height="128" width="128" />
+    <!-- JavaScript -->
+    <script>
+      // Change image when mouse is hovered over it
+      document.getElementById("imgofintr").addEventListener("mouseover", function switchimg() {
+        // change image
+        document.querySelector("img").src = "img/LincolnMemorial1.JPG";
+      });
+
+      // Change image back to original when mouse is left over it
+      document.getElementById("imgofintr").addEventListener("mouseleave", function switchimg() {
+        // change image
+        document.querySelector("img").src = "img/Rocky1.JPG";
+      });
+
+      // Change font style and/or color and  background color when mouse is over h1 tag
+      document.getElementById("demoh1ref").addEventListener("mouseenter", function () {
+        document.querySelector("h1").style.backgroundColor = "yellow";
+        // change text color
+        document.querySelector("h1").style.color = "black";
+        document.querySelector("h1").style.fontStyle = "italic";
+      });
+
+      // Change font style and/or color and  background color back to original when mouse is left h1 tag
+      document.getElementById("demoh1ref").addEventListener("mouseleave", function () {
+        document.querySelector("h1").style.backgroundColor = "#174e4e";
+        // change text color
+        document.querySelector("h1").style.color = "aliceblue";
+        document.querySelector("h1").style.fontStyle = "normal";
+      });
+
+      // change paragraph text's styles on mouse hover
+      document.getElementById("demopref").addEventListener("mouseenter", function () {
+        document.querySelector("p").style.fontSize = "x-large";
+        document.querySelector("p").style.fontStyle = "oblique";
+        document.querySelector("p").style.color = "orange";
+      });
+      // change paragraph text's to original styles on mouse leave
+      document.getElementById("demopref").addEventListener("mouseleave", function () {
+        document.querySelector("p").style.fontSize = "normal";
+        document.querySelector("p").style.fontStyle = "normal";
+        document.querySelector("p").style.color = "black";
+      });
+    </script>
+  </body>
+</html>
