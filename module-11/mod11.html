@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+    Nelson Morales
+    5.14.2022
+    Create a page similar to the example attached to this assignment
+    that alters the DOM based on user input.
+    Create a function that is executed when an image is clicked, 
+    using the “onclick” MouseEvent.
+       Bellevue University
+        -->
+<head>
+    <title>IMAGE GALLERY</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        .main_content {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .main_image {
+            width: 50%;
+        }
+
+        .main_image img {
+            width: 100%;
+            float: left;
+        }
+
+        .all_image img {
+            width: 16%;
+            float: left;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="main_image">
+            <img src="img/1.JPG" alt="trees" id="setImage">
+        </div>
+        <div class="all_image">
+            <img src="img/1.JPG" alt="trees" id="getImage" onclick="changeImage('img/1.jpg')">
+            <img src="img/2.JPG" alt="park" id="getImage" onclick="changeImage('img/2.jpg')">
+            <img src="img/3.JPG" alt="cave" id="getImage" onclick="changeImage('img/3.jpg')">
+            <img src="img/4.JPG" alt="closeupcave" id="getImage" onclick="changeImage('img/4.jpg')">
+            <img src="img/5.JPG" alt="closeupmoon" id="getImage" onclick="changeImage('img/5.jpg')">
+            <img src="img/6.JPG" alt="redclouds" id="getImage" onclick="changeImage('img/6.jpg')">
+            <img src="img/7.jpg" alt="closeupredclouds" id="getImage" onclick="changeImage('img/7.jpg')">
+            <img src="img/8.JPG" alt="moon" id="getImage" onclick="changeImage('img/8.jpg')">
+            <img src="img/9.JPG" alt="sunrise" id="getImage" onclick="changeImage('img/9.jpg')">
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function changeImage(name) { //onlclick function that will change the image
+        document.getElementById("setImage").src = name; //set the src to name image
+    }
+</script>
+
+</html>
